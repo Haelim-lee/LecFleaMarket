@@ -8,7 +8,7 @@ const NavBarElements = () => {
         <Navbar.Brand href="/">LecFleaMarket</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav>
             <Nav.Link href="/marketIntroduction">마켓소개</Nav.Link>
             <NavDropdown title="지원" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/NewsBoard">공지사항</NavDropdown.Item>
