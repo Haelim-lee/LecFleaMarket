@@ -1,5 +1,6 @@
 import '../../style.css';
 
+
 function NewsViewer(props) {
     return (
         <div className='boardcontainer' style={{ marginRight: '36px' }}>
@@ -16,4 +17,4 @@ function NewsViewer(props) {
     )
 }
 
-export default NewsViewer
+export default NewsViewer;
