@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Screen/Home';
+import MyPage from './Screen/MyPage';
+// import Board from './Common/Component/Board/index.js';
 
-function App() {
+function App(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="Contents" className="MasterPanel">
+        <Routes>
+          <Route path="/" exact element={<Home/>} key="Home"/>
+          <Route path="/MyPage" exact element={<MyPage/>} key="Mypage"/>
+          {/* <Route path="/QaBoard/:NUM" render={(props) => (<Board {...props} Type={'QaBoard'}/>)} key="QaBoard"/> */}
+        </Routes>
+      </div>
     </div>
   );
 }

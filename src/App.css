@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-bottom: 0px; 
 }
 
 .App-logo {
@@ -28,11 +29,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.MasterPanel {
+  justify-content: center;
+  display: flex;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+#Contents{
+  justify-content: center;
+  align-items : center;
 }
