@@ -34,3 +34,8 @@ npx create-react-app 플젝이름(대문자, 특수문자 X)
 ### <빌드>
 npm start
 npm run start
+
+![image](https://user-images.githubusercontent.com/86578107/215223188-9d01412e-82e3-4949-9de8-457cfafcbe3d.png)
+![image](https://user-images.githubusercontent.com/86578107/215223201-081d1b81-7782-4dc5-8900-dff4279edd15.png)
+
+
