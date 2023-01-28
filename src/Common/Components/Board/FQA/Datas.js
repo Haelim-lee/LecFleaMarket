@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FAQDatas = [
+const Datas = [
     {
       name : "Intro",
       blocks : [
@@ -29,4 +29,4 @@ const FAQDatas = [
     }
   ]
 
-  export default FAQDatas;
+  export default Datas;
