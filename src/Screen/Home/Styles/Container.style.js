@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Up, Draw} from './KeyFrames.style'
 
 export const Image = styled.img`
         height: 60vh;
@@ -7,6 +8,15 @@ export const Image = styled.img`
         border-radius: 7%;
         margin-top: 5%;
         margin-left: 20%;
+        position: relative;
+        transform: translateY(6rem);
+        animation: ${Up} 800ms linear forwards;
+        float: left;
+
+        &::before,
+	&::after {
+		position: absolute;
+	}
 `;
 
 export const SubPanel = styled.div`
