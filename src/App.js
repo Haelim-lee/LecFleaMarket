@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Screen/Home';
+import Home from './Screen/Home/Home';
 import MyPage from './Screen/MyPage';
 import QaBoard from './Common/Components/Board/QaBoard';
 import Login from './Common/Components/Login/LoginElements';

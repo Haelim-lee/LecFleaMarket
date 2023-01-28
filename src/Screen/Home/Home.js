@@ -1,10 +1,9 @@
 import React from 'react';
-import '../style.css';
-
+import Carousels from './CarouselsPage/Carousels';
 
 const Home = () => {
   return (
-    <div>Home</div>
+        <Carousels />
   )
 };
 
