@@ -1,14 +1,28 @@
-import React from 'react';
-//import React, { createRef, useState, useEffect } from 'react';
+import React, { useCallback, useState } from "react";
+import FAQCategories from './FAQCategories.js';
+import FAQBlocks from './FAQBlocks.js';
+import FAQDatas from './FAQDatas.js';
 
 function QaBoard(){
-    // useEffect(() => { // 폼로드와 비슷한 개념
-    //     GetPageList();
-    //   }, [게시글]);
 
-    return (
-      <div>QA Board</div>
-    )
+  var first = FAQDatas[0].name;
+
+  const [category, setCategory] = useState(first);
+  const onChangeCategory = useCallback((e) =>
+  {
+    setCategory(e.target.value);
+    console.log(category);
+  }, 
+  [category]);
+
+  var target = FAQDatas.find(d => d.name == category);
+
+  return (
+    <div id="fqa">
+      <FAQCategories categories={FAQDatas} changeCategory={onChangeCategory}/>
+      {FAQBlocks(target.blocks)}
+    </div>
+  );
 }
 
 export default QaBoard;
