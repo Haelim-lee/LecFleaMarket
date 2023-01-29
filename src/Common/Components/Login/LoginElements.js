@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from "react";
 import styled, { css } from 'styled-components';
 import Datas from './Datas.js';
-import Modal from '../Modal/Modal.js';
 import { CloseButton } from "react-bootstrap";
 
 const Login = styled.div`
@@ -49,9 +48,8 @@ const Input = styled.input`
 const LoginButton = styled.button`
 `;
 
-function LoginElements() {
+function LoginElements( {callback, close} ) {
     const [desc, setDesc] = useState("");
-    const [modalVisible, setModalVisible] = useState(true);
     const [inputId, setInputId] = useState("");
     const [inputPw, setInputPw] = useState("");
 
@@ -72,17 +70,17 @@ function LoginElements() {
         }
         else {
             console.log("Login Success");
+            setDesc("");
+
+            callback(target);
+            close();
         }
     }
-
-    const onCloseLogin = () => {
-        setModalVisible(false);
-    }
-
+   
     return (
-        <Modal visible={modalVisible}>
+        <>
             <CloseButtonGrid>
-                <CloseButton onClick={onCloseLogin} />
+                <CloseButton onClick={close} />
             </CloseButtonGrid>
             <Login>
                 <TitleGrid>
@@ -99,7 +97,7 @@ function LoginElements() {
                     <LoginButton type='button' onClick={onClickLogin}>Login</LoginButton>
                 </ButtonGrid>
             </Login>
-        </Modal>
+        </>
     )
 };
 
