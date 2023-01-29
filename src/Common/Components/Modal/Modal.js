@@ -55,7 +55,7 @@ const ModalInner = styled.div`
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 15px 15px;
 `
 
 export default Modal;
