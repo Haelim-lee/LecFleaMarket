@@ -66,13 +66,16 @@ function LoginElements( {callback, close} ) {
         var target = Datas.find(d => d.id == inputId && d.pw == inputPw);
         if (target == null) {
             console.log("Login Fail");
+            // Fail Message
             setDesc("Please check ID or Password.");
         }
         else {
             console.log("Login Success");
+            // If Success, message is empty.
             setDesc("");
-
+            // run callback function in home
             callback(target);
+            // close this modal
             close();
         }
     }
