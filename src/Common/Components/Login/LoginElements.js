@@ -94,9 +94,7 @@ function LoginElements() {
                     <Label htmlFor='input_pw'>PW</Label>
                     <Input type='password' name='input_pw' value={inputPw} onChange={handleInputPw} />
                 </InputGrid>
-                <DescGrid>
-                    {desc}
-                </DescGrid>
+                <DescGrid>{desc}</DescGrid>
                 <ButtonGrid>
                     <LoginButton type='button' onClick={onClickLogin}>Login</LoginButton>
                 </ButtonGrid>
