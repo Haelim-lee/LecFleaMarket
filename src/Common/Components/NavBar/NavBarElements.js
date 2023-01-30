@@ -16,7 +16,6 @@ const NavBarElements = () => {
             </NavDropdown>
             <NavDropdown title="학습케어" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/Care">가벼운 실력평가</NavDropdown.Item>
-              <NavDropdown.Item href="/Care/*">1:1 학습멘토링</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/Application">수강신청</Nav.Link>
             <NavDropdown title="강의정보?" id="collasible-nav-dropdown">
