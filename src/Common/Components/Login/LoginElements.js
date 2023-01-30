@@ -1,22 +1,21 @@
 import React, { useCallback, useState } from "react";
 import styled, { css } from 'styled-components';
 import Datas from './Datas.js';
-import { CloseButton } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 const Login = styled.div`
-    margin-left : 10%;
-    margin-right : 10%;
-`;
-
-const CloseButtonGrid = styled.div`
-    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    margin-top: 200px;
 `;
 
 const TitleGrid = styled.div`
+    grid-column: 2;
     text-align: center;
 `;
 
 const InputGrid = styled.div`
+    grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 15px;
@@ -25,12 +24,13 @@ const InputGrid = styled.div`
 `;
 
 const DescGrid = styled.div`
-
+    grid-column: 2;
     height : 40px;
     color: red;
 `;
 
 const ButtonGrid = styled.div`
+    grid-column: 2;
     display: grid;
     grid-gap: 15px;
     margin-bottom: 5%;
@@ -52,6 +52,7 @@ function LoginElements( {callback, close} ) {
     const [desc, setDesc] = useState("");
     const [inputId, setInputId] = useState("");
     const [inputPw, setInputPw] = useState("");
+    const navigate = useNavigate();
 
     const handleInputId = (e) => {
         setInputId(e.target.value)
@@ -75,16 +76,12 @@ function LoginElements( {callback, close} ) {
             setDesc("");
             // run callback function in home
             callback(target);
-            // close this modal
-            close();
+            navigate("/")
         }
     }
    
     return (
         <>
-            <CloseButtonGrid>
-                <CloseButton onClick={close} />
-            </CloseButtonGrid>
             <Login>
                 <TitleGrid>
                     <Title>Login</Title>
