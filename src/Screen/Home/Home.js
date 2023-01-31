@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import Carousels from './CarouselsPage/Carousels';
 
-const Home = () => {
+const Home = (props) => {
   return (
       <Carousels />
   )
