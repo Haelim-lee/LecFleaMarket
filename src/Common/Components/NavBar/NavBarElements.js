@@ -1,7 +1,18 @@
-import React from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
 
-const NavBarElements = () => {
+const NavBarElements = (props) => {
+
+  useEffect(() => {
+    console.log("---------------------------")
+    console.log("NavBarElements.js rendering")
+    console.log("User")
+    console.log(window.sessionStorage.getItem("user"));
+    console.log("IsLogined");
+    console.log(props.isLogined)
+    console.log("---------------------------")
+  });
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -27,7 +38,11 @@ const NavBarElements = () => {
             <Nav.Link href="/Community">커뮤니티</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/Login">로그인</Nav.Link>
+            {
+              props.isLogined
+              ? <Nav.Link href="/Logout">로그아웃</Nav.Link>
+              : <Nav.Link href="/Login">로그인</Nav.Link>
+            }
             <Nav.Link eventKey={2} href="/Join">회원가입</Nav.Link>
           </Nav>
         </Navbar.Collapse>
