@@ -9,7 +9,7 @@ import Login from './Common/Components/Login/LoginElements';
 import Logout from './Common/Components/Login/Logout.js';
 import Navbar from './Common/Components/NavBar/NavBarElements';
 import JoinEnterance from './Common/Components/Join/JoinEnterance';
-import Join from './Common/Components/Join/Join';
+import JoinElements from './Common/Components/Join/Join';
 import JoinUsingFacebook from './Common/Components/Join/JoinUsingFacebook';
 import JoinUsingKakao from './Common/Components/Join/JoinUsingKakao';
 
@@ -50,7 +50,7 @@ function App() {
 
         <Route path="/JoinUsingFacebook" element={<JoinUsingFacebook/>}/>
         <Route path="/JoinUsingKakao" element={<JoinUsingKakao/>}/>
-        <Route path="/Join" element={<Join/>}/>
+        <Route path="/Join" element={<JoinElements/>}/>
       </Routes>
     </Router>
   );

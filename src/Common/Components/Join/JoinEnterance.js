@@ -2,11 +2,6 @@ import React, { useCallback, useState } from "react";
 import styled, { css } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-import JoinUsingFacebook from "./JoinUsingFacebook";
-import JoinUsingKakao from "./JoinUsingKakao";
-import Join from "./Join";
-
-
 const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 350px 1fr;

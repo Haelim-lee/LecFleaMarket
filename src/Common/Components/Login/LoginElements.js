@@ -50,12 +50,12 @@ const LoginButton = styled.button`
 
 function LoginElements({callback}) {
     const [desc, setDesc] = useState("");
-    const [inputId, setInputId] = useState("");
+    const [inputMail, setInputMail] = useState("");
     const [inputPw, setInputPw] = useState("");
     const navigate = useNavigate();
 
-    const handleInputId = (e) => {
-        setInputId(e.target.value)
+    const handleInputMail = (e) => {
+        setInputMail(e.target.value)
     }
 
     const handleInputPw = (e) => {
@@ -64,7 +64,7 @@ function LoginElements({callback}) {
 
     const onClickLogin = () => {
 
-        var target = Datas.find(d => d.id == inputId && d.pw == inputPw);
+        var target = Datas.find(d => d.id == inputMail && d.pw == inputPw);
         if (target == null) {
             // Fail Message
             setDesc("Please check ID or Password.");
@@ -85,8 +85,8 @@ function LoginElements({callback}) {
                     <Title>Login</Title>
                 </TitleGrid>
                 <InputGrid>
-                    <Label htmlFor='input_id'>ID</Label>
-                    <Input type='text' name='input_id' value={inputId} onChange={handleInputId} />
+                    <Label htmlFor='input_mail'>E-Mail</Label>
+                    <Input type='text' name='input_mail' value={inputMail} onChange={handleInputMail} />
                     <Label htmlFor='input_pw'>PW</Label>
                     <Input type='password' name='input_pw' value={inputPw} onChange={handleInputPw} />
                 </InputGrid>
