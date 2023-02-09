@@ -43,7 +43,7 @@ const NavBarElements = (props) => {
               ? <Nav.Link href="/Logout">로그아웃</Nav.Link>
               : <Nav.Link href="/Login">로그인</Nav.Link>
             }
-            <Nav.Link eventKey={2} href="/Join">회원가입</Nav.Link>
+            <Nav.Link eventKey={2} href="/JoinEnterance">회원가입</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

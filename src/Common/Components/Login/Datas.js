@@ -1,10 +1,10 @@
 const Datas= [
     {
-        id : "lee",
+        email : "lee",
         pw : "0616",
     },
     {
-        id : "park",
+        email : "park",
         pw : "0816",
     },
 ]
